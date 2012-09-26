@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+<title>vwReg. microbiome 0.3.39</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="author" content="">
+
+<link href="css/bootstrap.css" rel="stylesheet">
+<link href="css/bootstrap-responsive.css" rel="stylesheet">
+<link href="css/highlight.css" rel="stylesheet">
+<link href="css/staticdocs.css" rel="stylesheet">
+
+<!--[if lt IE 9]>
+  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+  </head>
+
+  <body>
+    <div class="navbar">
+  <div class="navbar-inner">
+    <div class="container">
+      <a class="brand" href="#">microbiome 0.3.39</a>
+      <div class="nav">
+        <ul class="nav">
+          <li><a href="index.html"><i class="icon-home icon-white"></i> Index</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <div class="container">
+      <header>
+        
+      </header>
+      
+      <h1>Description: Draw regression curve with smoothed error bars
+based on the Visually-Weighted Regression by Solomon M. Hsiang; see
+http://www.fight-entropy.com/2012/07/visually-weighted-regression.html
+The R implementation is based on Felix Schönbrodt's code from
+http://www.nicebread.de/visually-weighted-watercolor-plots-new-variants-please-vote/</h1>
+
+<div class="row">
+  <div class="span8">
+    <h2>Usage</h2>
+    <pre><span class="functioncall"><a href='vwReg.html'>vwReg</a></span><span class="keyword">(</span><span class="symbol">formula</span><span class="keyword">,</span> <span class="symbol">data</span><span class="keyword">,</span> <span class="argument">B</span> <span class="argument">=</span> <span class="number">1000</span><span class="keyword">,</span> <span class="argument">shade</span> <span class="argument">=</span> <span class="number">TRUE</span><span class="keyword">,</span> <span class="argument">spag</span> <span class="argument">=</span> <span class="number">FALSE</span><span class="keyword">,</span> <span class="argument">mweight</span> <span class="argument">=</span> <span class="number">TRUE</span><span class="keyword">,</span> <span class="argument">show.lm</span> <span class="argument">=</span> <span class="number">FALSE</span><span class="keyword">,</span>
+  <span class="argument">show.CI</span> <span class="argument">=</span> <span class="number">FALSE</span><span class="keyword">)</span>
+
+<span class="functioncall"><a href='vwReg.html'>vwReg</a></span><span class="keyword">(</span><span class="symbol">formula</span><span class="keyword">,</span> <span class="symbol">data</span><span class="keyword">,</span> <span class="argument">B</span> <span class="argument">=</span> <span class="number">1000</span><span class="keyword">,</span> <span class="argument">shade</span> <span class="argument">=</span> <span class="number">TRUE</span><span class="keyword">,</span> <span class="argument">spag</span> <span class="argument">=</span> <span class="number">FALSE</span><span class="keyword">,</span> <span class="argument">mweight</span> <span class="argument">=</span> <span class="number">TRUE</span><span class="keyword">,</span> <span class="argument">show.lm</span> <span class="argument">=</span> <span class="number">FALSE</span><span class="keyword">,</span>
+      <span class="argument">show.CI</span> <span class="argument">=</span> <span class="number">FALSE</span><span class="keyword">)</span></pre>
+    
+    <h2>Arguments</h2>
+    <dl>
+      <dt>formula</dt>
+      <dd>formula</dd>
+      <dt>data</dt>
+      <dd>data</dd>
+      <dt>title</dt>
+      <dd>title</dd>
+      <dt>B</dt>
+      <dd>number bootstrapped smoothers</dd>
+      <dt>shade</dt>
+      <dd>plot the shaded confidence region?</dd>
+      <dt>shade.alpha</dt>
+      <dd>shade.alpha: should the CI shading
+  fade out at the edges? (by reducing alpha; 0 = no alpha
+  decrease, 0.1 = medium alpha decrease, 0.5 = strong alpha
+  decrease)</dd>
+      <dt>spag:</dt>
+      <dd>plot spaghetti lines?</dd>
+      <dt>mweight</dt>
+      <dd>should the median smoother be visually
+  weighted?</dd>
+      <dt>show.lm</dt>
+      <dd>should the linear regresison line be
+  plotted?</dd>
+      <dt>show.median</dt>
+      <dd>show median smoother</dd>
+      <dt>median.col</dt>
+      <dd>median color</dd>
+      <dt>show.CI:</dt>
+      <dd>should the 95
+
+  \itemmethodthe fitting function for the spaghettis;
+  default: loess
+
+  \itembwdefine a default b/w-palette (TRUE/FALSE)
+
+  \itemslicesnumber of slices in x and y direction for
+  the shaded region. Higher numbers make a smoother plot,
+  but takes longer to draw. I wouldn'T go beyond 500
+
+  \itempaletteprovide a custom color palette for the
+  watercolors
+
+  \itemylimrestrict range of the watercoloring
+
+  \itemquantizeeither "continuous", or "SD". In the
+  latter case, we get three color regions for 1, 2, and 3
+  SD (an idea of John Mashey)
+
+  \item...further parameters passed to the fitting
+  function, in the case of loess, for example, "span = .9",
+  or "family = 'symmetric'"
+
+  Returns:
+
+  \itemformulaformula
+
+  \itemdatadata
+
+  \itemBnumber bootstrapped smoothers
+
+  \itemshade:plot the shaded confidence region?
+
+  \itemspag:plot spaghetti lines?
+
+  \itemmweight:should the median smoother be visually
+  weighted?
+
+  \itemshow.lm:should the linear regresison line be
+  plotted?
+
+  \itemshow.CI:should the 95
+
+  Returns:
+</dd>
+    </dl>
+          </div>
+  <div class="span4">
+    <!-- <ul>
+      <li>vwReg</li>
+    </ul>
+    <ul>
+      
+    </ul> -->
+      
+        
+  </div>
+</div>
+      
+      <footer>
+      <p class="pull-right"><a href="#">Back to top</a></p>
+<p>Built by <a href="https://github.com/hadley/staticdocs">staticdocs</a>. Styled with <a href="http://twitter.github.com/bootstrap">bootstrap</a>.</p>
+      </footer>
+    </div>
+  </body>
+</html>
