@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-<title>diversity.boxplot. microbiome 0.3.40</title>
+<title>PhyloPlot. microbiome 0.3.40</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="author" content="
   Contact: Leo Lahti
@@ -38,26 +38,34 @@
         
       </header>
       
-      <h1>diversity.boxplot</h1>
+      <h1>Description:
+Visualize the histogram, density estimate, and estimated Gaussian latent classes for a given vector</h1>
 
 <div class="row">
   <div class="span8">
     <h2>Usage</h2>
-    <pre><span class="functioncall"><a href='diversity.boxplot.html'>diversity.boxplot</a></span><span class="keyword">(</span><span class="symbol">div.table</span><span class="keyword">,</span> <span class="argument">diversity.index</span> <span class="argument">=</span> <span class="string">"invsimpson"</span><span class="keyword">,</span> <span class="argument">title</span> <span class="argument">=</span> NULL<span class="keyword">,</span> <span class="symbol">col.list</span><span class="keyword">,</span>
-  <span class="symbol">sample.groups</span><span class="keyword">)</span></pre>
+    <pre><span class="functioncall"><a href='PhyloPlot.html'>PhyloPlot</a></span><span class="keyword">(</span><span class="symbol">vec</span><span class="keyword">,</span> <span class="argument">max.responses</span> <span class="argument">=</span> <span class="number">8</span><span class="keyword">,</span> <span class="argument">mixture.method</span> <span class="argument">=</span> <span class="string">"bic"</span><span class="keyword">,</span> <span class="argument">bic.threshold</span> <span class="argument">=</span> <span class="number">0</span><span class="keyword">,</span> <span class="argument">title.text</span> <span class="argument">=</span> NULL<span class="keyword">,</span>
+  <span class="argument">xlab.text</span> <span class="argument">=</span> NULL<span class="keyword">,</span> <span class="argument">ylab.text</span> <span class="argument">=</span> <span class="string">"Frequency"</span><span class="keyword">)</span></pre>
     
     <h2>Arguments</h2>
     <dl>
-      <dt>div.table</dt>
-      <dd>diversity table: output from the
-  estimate.diversity function</dd>
-      <dt>diversity.index</dt>
-      <dd>specify the diversity index to
-  plot (diversity / richness / evenness)</dd>
-      <dt>title</dt>
-      <dd>figure title</dd>
-      <dt>n.groups</dt>
-      <dd>max number of groups for boxplot
+      <dt>vec</dt>
+      <dd>numeric data vector</dd>
+      <dt>max.responses</dt>
+      <dd>maximum number of latent classes to
+  consider</dd>
+      <dt>mixture.method</dt>
+      <dd>information criterion for
+  estimating the number of latent classes</dd>
+      <dt>bic.threshold</dt>
+      <dd>threshold for adding new components
+  (latent classes) in the mixture</dd>
+      <dt>title.text</dt>
+      <dd>title.text</dd>
+      <dt>xlab.text</dt>
+      <dd>xlab.text</dd>
+      <dt>ylab.text</dt>
+      <dd>ylab.text
 
   Returns:</dd>
     </dl>
@@ -65,19 +73,12 @@
     <div class="Value">
       <h2>Value</h2>
       
-      <p>Sample group list corresponding to the boxplot groups.</p>
+      <p>ggplot2 object</p>
   
     </div>
 
     <div class="Description">
       <h2>Description</h2>
-      
-      <p>Description: diversity.boxplot</p>
-  
-    </div>
-
-    <div class="Details">
-      <h2>Details</h2>
       
       <p>Arguments:</p>
   
@@ -92,7 +93,7 @@
       </div>
   <div class="span4">
     <!-- <ul>
-      <li>diversity.boxplot</li>
+      <li>PhyloPlot</li>
     </ul>
     <ul>
       <li>utilities</li>
