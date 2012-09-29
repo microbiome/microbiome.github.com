@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-<title>estimate.diversity. microbiome 0.3.42</title>
+<title>estimate.diversity. microbiome 0.3.43</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="author" content="
   Contact: Leo Lahti
@@ -23,7 +23,7 @@
     <div class="navbar">
   <div class="navbar-inner">
     <div class="container">
-      <a class="brand" href="#">microbiome 0.3.42</a>
+      <a class="brand" href="#">microbiome 0.3.43</a>
       <div class="nav">
         <ul class="nav">
           <li><a href="index.html"><i class="icon-home icon-white"></i> Index</a></li>
@@ -51,7 +51,8 @@
       <dd>data matrix (phylotypes x samples) in original
   (non-log) scale</dd>
       <dt>diversity.index</dt>
-      <dd>diversity index</dd>
+      <dd>diversity index (shannon or
+  invsimpson)</dd>
       <dt>det.th</dt>
       <dd>detection threshold. Used for richness and
   evenness estimation. Not used in diversity estimation.
@@ -62,7 +63,8 @@
     <div class="Value">
       <h2>Value</h2>
       
-      <p>diversity indicators</p>
+      <p>Table with various richness, evenness, and diversity
+  indicators</p>
   
     </div>
 
@@ -70,8 +72,7 @@
       <h2>Description</h2>
       
       <p>Description: Estimate diversities for each sample
-  (column) Aliases: get.diversity.estimates. Also replaces
-  the function ST: diversity.indices</p>
+  (column)</p>
   
     </div>
 

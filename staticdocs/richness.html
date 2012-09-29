@@ -2,10 +2,11 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-<title>level2TOlevel0. microbiome 0.3.43</title>
+<title>richness. microbiome 0.3.43</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="author" content="
-  Contact: Leo Lahti &lt;a href='mailto:leo.lahti@iki.fi'&gt;leo.lahti@iki.fi&lt;/a&gt;
+  Contact: Leo Lahti
+  &lt;a href='mailto:microbiome-admin@googlegroups.com'&gt;microbiome-admin@googlegroups.com&lt;/a&gt;
 ">
 
 <link href="css/bootstrap.css" rel="stylesheet">
@@ -37,19 +38,21 @@
         
       </header>
       
-      <h1>Description: L2-L0 mappings</h1>
+      <h1>richness</h1>
 
 <div class="row">
   <div class="span8">
     <h2>Usage</h2>
-    <pre><span class="functioncall"><a href='level2TOlevel0.html'>level2TOlevel0</a></span><span class="keyword">(</span><span class="symbol">l2</span><span class="keyword">,</span> <span class="symbol">phylogeny.info</span><span class="keyword">)</span></pre>
+    <pre><span class="functioncall"><a href='richness.html'>richness</a></span><span class="keyword">(</span><span class="symbol">dat</span><span class="keyword">,</span> <span class="argument">det.th</span> <span class="argument">=</span> NULL<span class="keyword">)</span></pre>
     
     <h2>Arguments</h2>
     <dl>
-      <dt>l2</dt>
-      <dd>level2 phylotypes</dd>
-      <dt>phylogeny.info</dt>
-      <dd>phylogeny.info
+      <dt>dat</dt>
+      <dd>data matrix (phylotypes x samples) in original
+  (non-log) scale</dd>
+      <dt>det.th</dt>
+      <dd>detection threshold. Used for richness and
+  evenness estimation. Not used in diversity estimation.
 
   Returns:</dd>
     </dl>
@@ -57,12 +60,20 @@
     <div class="Value">
       <h2>Value</h2>
       
-      <p>mappings</p>
+      <p>Vector containing richness estimate for each sample</p>
   
     </div>
 
     <div class="Description">
       <h2>Description</h2>
+      
+      <p>Description: Estimate richness for each sample with a
+  given threshold</p>
+  
+    </div>
+
+    <div class="Details">
+      <h2>Details</h2>
       
       <p>Arguments:</p>
   
@@ -77,7 +88,7 @@
       </div>
   <div class="span4">
     <!-- <ul>
-      <li>level2TOlevel0</li>
+      <li>richness</li>
     </ul>
     <ul>
       <li>utilities</li>
@@ -86,7 +97,8 @@
     
     <h2>Author</h2>
     
-  Contact: Leo Lahti <a href='mailto:leo.lahti@iki.fi'>leo.lahti@iki.fi</a>
+  Contact: Leo Lahti
+  <a href='mailto:microbiome-admin@googlegroups.com'>microbiome-admin@googlegroups.com</a>
 
     
   </div>

@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-<title>diversity.boxplot. microbiome 0.3.42</title>
+<title>diversity.boxplot. microbiome 0.3.43</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="author" content="
   Contact: Leo Lahti
@@ -23,7 +23,7 @@
     <div class="navbar">
   <div class="navbar-inner">
     <div class="container">
-      <a class="brand" href="#">microbiome 0.3.42</a>
+      <a class="brand" href="#">microbiome 0.3.43</a>
       <div class="nav">
         <ul class="nav">
           <li><a href="index.html"><i class="icon-home icon-white"></i> Index</a></li>
@@ -43,21 +43,26 @@
 <div class="row">
   <div class="span8">
     <h2>Usage</h2>
-    <pre><span class="functioncall"><a href='diversity.boxplot.html'>diversity.boxplot</a></span><span class="keyword">(</span><span class="symbol">div.table</span><span class="keyword">,</span> <span class="argument">diversity.index</span> <span class="argument">=</span> <span class="string">"invsimpson"</span><span class="keyword">,</span> <span class="argument">title</span> <span class="argument">=</span> NULL<span class="keyword">,</span> <span class="symbol">col.list</span><span class="keyword">,</span>
-  <span class="symbol">sample.groups</span><span class="keyword">)</span></pre>
+    <pre><span class="functioncall"><a href='diversity.boxplot.html'>diversity.boxplot</a></span><span class="keyword">(</span><span class="symbol">dat</span><span class="keyword">,</span> <span class="symbol">sample.groups</span><span class="keyword">,</span> <span class="argument">diversity.index</span> <span class="argument">=</span> <span class="string">"shannon"</span><span class="keyword">,</span> <span class="argument">det.th</span> <span class="argument">=</span> NULL<span class="keyword">,</span>
+  <span class="argument">title</span> <span class="argument">=</span> NULL<span class="keyword">,</span> <span class="argument">col.list</span> <span class="argument">=</span> NULL<span class="keyword">)</span></pre>
     
     <h2>Arguments</h2>
     <dl>
-      <dt>div.table</dt>
-      <dd>diversity table: output from the
-  estimate.diversity function</dd>
+      <dt>dat</dt>
+      <dd>data matrix in the original (non-log) scale:
+  features x samples.</dd>
+      <dt>sample.groups</dt>
+      <dd>specify the distinct sample groups</dd>
       <dt>diversity.index</dt>
-      <dd>specify the diversity index to
-  plot (diversity / richness / evenness)</dd>
+      <dd>Options: "shannon" / "invsimpson"
+  / "richness" / "evenness"</dd>
+      <dt>det.th</dt>
+      <dd>Detection threshold for richness and
+  evenness calculations</dd>
       <dt>title</dt>
       <dd>figure title</dd>
-      <dt>n.groups</dt>
-      <dd>max number of groups for boxplot
+      <dt>col.list</dt>
+      <dd>Optional: colors for the sample groups
 
   Returns:</dd>
     </dl>
