@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-<title>plot_cumulative. microbiome 0.3.47</title>
+<title>diversity.table. microbiome 0.3.47</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="author" content="
   Contact: Leo Lahti
@@ -38,30 +38,34 @@
         
       </header>
       
-      <h1>plot_cunulative</h1>
+      <h1>diversity.table</h1>
 
 <div class="row">
   <div class="span8">
     <h2>Usage</h2>
-    <pre><span class="functioncall"><a href='plot_cumulative.html'>plot_cumulative</a></span><span class="keyword">(</span><span class="symbol">d.sub</span><span class="keyword">,</span> <span class="symbol">writedir</span><span class="keyword">,</span> <span class="symbol">fname</span><span class="keyword">,</span> <span class="argument">i.set</span> <span class="argument">=</span> NULL<span class="keyword">,</span> <span class="argument">type</span> <span class="argument">=</span> <span class="string">"cumulative"</span><span class="keyword">,</span> <span class="argument">ylim</span> <span class="argument">=</span> NULL<span class="keyword">,</span>
-  <span class="symbol">phylogeny.info</span><span class="keyword">)</span></pre>
+    <pre><span class="functioncall"><a href='diversity.table.html'>diversity.table</a></span><span class="keyword">(</span><span class="symbol">dat</span><span class="keyword">,</span> <span class="symbol">phylogeny.info</span><span class="keyword">,</span> <span class="symbol">level.from</span><span class="keyword">,</span> <span class="symbol">level.to</span><span class="keyword">,</span> <span class="argument">diversity.index</span> <span class="argument">=</span> <span class="string">"shannon"</span><span class="keyword">,</span>
+  <span class="argument">det.th</span> <span class="argument">=</span> <span class="number">0</span><span class="keyword">)</span></pre>
     
     <h2>Arguments</h2>
     <dl>
-      <dt>d.sub</dt>
-      <dd>d.sub</dd>
-      <dt>writedir</dt>
-      <dd>output directory</dd>
-      <dt>fname</dt>
-      <dd>output file name</dd>
-      <dt>i.set</dt>
-      <dd>i.set</dd>
-      <dt>type</dt>
-      <dd>plot type</dd>
-      <dt>ylim</dt>
-      <dd>y axis limits</dd>
+      <dt>dat</dt>
+      <dd>data matrix (phylotypes x samples) in original
+  (non-log) scale</dd>
       <dt>phylogeny.info</dt>
-      <dd>phylogeny.info matrix
+      <dd>mapping table between taxonomic
+  levels</dd>
+      <dt>level.from</dt>
+      <dd>higher-level taxonomic groups for which
+  the diversity will be calculated</dd>
+      <dt>level.to</dt>
+      <dd>lower taxonomic level used for the
+  diversity calculations. Must correspond to the input data
+  matrix argument 'dat'</dd>
+      <dt>diversity.index</dt>
+      <dd>diversity index (shannon or
+  invsimpson)</dd>
+      <dt>det.th</dt>
+      <dd>Optional detection threshold.
 
   Returns:</dd>
     </dl>
@@ -69,14 +73,16 @@
     <div class="Value">
       <h2>Value</h2>
       
-      <p>TBA</p>
+      <p>Table with various richness, evenness, and diversity
+  indicators</p>
   
     </div>
 
     <div class="Description">
       <h2>Description</h2>
       
-      <p>Description: plot_cumulative</p>
+      <p>Description: Estimate diversity within each taxonomic
+  group across the samples</p>
   
     </div>
 
@@ -93,13 +99,10 @@
       <p>See citation("microbiome")</p>
   
     </div>
-    
-    <h2 id="examples">Examples</h2>
-    <pre class="examples"><div class='input'># bs <- bootstrap.microbes(phylum.matrix); plot_cumulative(bs, writedir = "./", "tmp-", phylogeny.info = phylogeny.info)</div></pre>
-  </div>
+      </div>
   <div class="span4">
     <!-- <ul>
-      <li>plot_cumulative</li>
+      <li>diversity.table</li>
     </ul>
     <ul>
       <li>utilities</li>
