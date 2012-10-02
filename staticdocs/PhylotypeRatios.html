@@ -2,11 +2,10 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-<title>rsd. microbiome 0.3.48</title>
+<title>PhylotypeRatios. microbiome 0.3.48</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="author" content="
-  Douwe Molenaar. Maintainer: Leo Lahti
-  &lt;a href='mailto:microbiome-admin@googlegroups.com'&gt;microbiome-admin@googlegroups.com&lt;/a&gt;
+  Leo Lahti &lt;a href='mailto:microbiome-admin@googlegroups.com'&gt;microbiome-admin@googlegroups.com&lt;/a&gt;
 ">
 
 <link href="css/bootstrap.css" rel="stylesheet">
@@ -38,37 +37,34 @@
         
       </header>
       
-      <h1>Relative standard deviation using paired measurements</h1>
+      <h1>PhylotypeRatios</h1>
 
 <div class="row">
   <div class="span8">
     <h2>Usage</h2>
-    <pre><span class="functioncall"><a href='rsd.html'>rsd</a></span><span class="keyword">(</span><span class="symbol">x</span><span class="keyword">,</span> <span class="argument">y</span> <span class="argument">=</span> NULL<span class="keyword">)</span></pre>
+    <pre><span class="functioncall"><a href='PhylotypeRatios.html'>PhylotypeRatios</a></span><span class="keyword">(</span><span class="symbol">dat</span><span class="keyword">)</span></pre>
     
     <h2>Arguments</h2>
     <dl>
-      <dt>x</dt>
-      <dd>dataframe, matrix or vector</dd>
-      <dt>y</dt>
-      <dd>dataframe, matrix or vector compatible with x</dd>
+      <dt>dat</dt>
+      <dd>phylotypes vs. samples data matrix in log10
+  scale</dd>
     </dl>
     
     <div class="Value">
       <h2>Value</h2>
       
-      <p>Returns a matrix of rsd values.</p>
+      <p>phylotype pairs x samples matrix indicating the ratio (in
+  log10 domain) between each unique pair</p>
   
     </div>
 
     <div class="Description">
       <h2>Description</h2>
       
-      <p>Calculates an unbiased estimate of the the relative
-  squared difference of x.  Although most RSD calculations
-  use the following formula: mean(abs(x_i-y_i)/(x_i+y_i))
-  we here use: mean(sqrt(pi)*abs(x_i-y_i)/(x_i+y_i)) The
-  latter is an unbiased estimate of the relative standard
-  deviation (sigma/mu) when data are normal distributed.</p>
+      <p>Calculate phylotype ratios (eg. Bacteroides vs.
+  Prevotella etc.) for a given phylotypes vs. samples
+  matrix</p>
   
     </div>
 
@@ -80,11 +76,11 @@
     </div>
     
     <h2 id="examples">Examples</h2>
-    <pre class="examples"><div class='input'># TBA</div></pre>
+    <pre class="examples"><div class='input'>#</div></pre>
   </div>
   <div class="span4">
     <!-- <ul>
-      <li>rsd</li>
+      <li>PhylotypeRatios</li>
     </ul>
     <ul>
       <li>utilities</li>
@@ -93,8 +89,7 @@
     
     <h2>Author</h2>
     
-  Douwe Molenaar. Maintainer: Leo Lahti
-  <a href='mailto:microbiome-admin@googlegroups.com'>microbiome-admin@googlegroups.com</a>
+  Leo Lahti <a href='mailto:microbiome-admin@googlegroups.com'>microbiome-admin@googlegroups.com</a>
 
     
   </div>
