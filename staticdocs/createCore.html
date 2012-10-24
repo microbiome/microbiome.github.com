@@ -2,10 +2,10 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-<title>createCore. microbiome 0.3.48</title>
+<title>createCore. microbiome 0.3.51</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="author" content="
-  Contact: Leo Lahti
+  Contact: Jarkko Salojarvi
   &lt;a href='mailto:microbiome-admin@googlegroups.com'&gt;microbiome-admin@googlegroups.com&lt;/a&gt;
 ">
 
@@ -23,7 +23,7 @@
     <div class="navbar">
   <div class="navbar-inner">
     <div class="container">
-      <a class="brand" href="#">microbiome 0.3.48</a>
+      <a class="brand" href="#">microbiome 0.3.51</a>
       <div class="nav">
         <ul class="nav">
           <li><a href="index.html"><i class="icon-home icon-white"></i> Index</a></li>
@@ -43,14 +43,22 @@
 <div class="row">
   <div class="span8">
     <h2>Usage</h2>
-    <pre><span class="functioncall"><a href='createCore.html'>createCore</a></span><span class="keyword">(</span><span class="symbol">data</span><span class="keyword">,</span> <span class="argument">I.thr</span> <span class="argument">=</span> <span class="number">1.8</span><span class="keyword">)</span></pre>
+    <pre><span class="functioncall"><a href='createCore.html'>createCore</a></span><span class="keyword">(</span><span class="symbol">data</span><span class="keyword">,</span> <span class="argument">I.thr</span> <span class="argument">=</span> <span class="number">0</span><span class="keyword">,</span> <span class="argument">verbose</span> <span class="argument">=</span> <span class="number">FALSE</span><span class="keyword">,</span> <span class="argument">prevalence.intervals</span> <span class="argument">=</span> NULL<span class="keyword">,</span> <span class="argument">intensity.intervals</span> <span class="argument">=</span> <span class="number">20</span><span class="keyword">)</span></pre>
     
     <h2>Arguments</h2>
     <dl>
       <dt>data</dt>
-      <dd>data matrix</dd>
+      <dd>data matrix; phylotypes vs. samples</dd>
       <dt>I.thr</dt>
-      <dd>core threshold
+      <dd>core threshold</dd>
+      <dt>verbose</dt>
+      <dd>verbose</dd>
+      <dt>prevalence.intervals</dt>
+      <dd>number of bins on the
+  prevalence grid</dd>
+      <dt>intensity.intervals</dt>
+      <dd>number of bins on the
+  intensity grid
 
   Returns:</dd>
     </dl>
@@ -97,7 +105,7 @@
     
     <h2>Author</h2>
     
-  Contact: Leo Lahti
+  Contact: Jarkko Salojarvi
   <a href='mailto:microbiome-admin@googlegroups.com'>microbiome-admin@googlegroups.com</a>
 
     

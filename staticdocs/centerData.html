@@ -2,11 +2,10 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-<title>GenerateSimulatedData. microbiome 0.3.51</title>
+<title>centerData. microbiome 0.3.51</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="author" content="
-  Contact: Leo Lahti
-  &lt;a href='mailto:microbiome-admin@googlegroups.com'&gt;microbiome-admin@googlegroups.com&lt;/a&gt;
+  Leo Lahti &lt;a href='mailto:microbiome-admin@googlegroups.com'&gt;microbiome-admin@googlegroups.com&lt;/a&gt;
 ">
 
 <link href="css/bootstrap.css" rel="stylesheet">
@@ -38,55 +37,70 @@
         
       </header>
       
-      <h1>Description: Generate toydata for the package</h1>
+      <h1>Center data matrix.</h1>
 
 <div class="row">
   <div class="span8">
     <h2>Usage</h2>
-    <pre><span class="functioncall"><a href='GenerateSimulatedData.html'>GenerateSimulatedData</a></span><span class="keyword">(</span><span class="symbol">output.dir</span><span class="keyword">)</span></pre>
+    <pre><span class="functioncall"><a href='centerData.html'>centerData</a></span><span class="keyword">(</span><span class="symbol">X</span><span class="keyword">,</span> <span class="argument">rm.na</span> <span class="argument">=</span> <span class="number">TRUE</span><span class="keyword">,</span> <span class="argument">meanvalue</span> <span class="argument">=</span> NULL<span class="keyword">)</span></pre>
     
     <h2>Arguments</h2>
     <dl>
-      <dt>output.dir</dt>
-      <dd>output directory name
-
-  Returns:</dd>
+      <dt>X</dt>
+      <dd>The data set: samples x features. Each feature
+  will be centered.</dd>
+      <dt>rm.na</dt>
+      <dd>Ignore NAs.</dd>
+      <dt>meanvalue</dt>
+      <dd>Can be used to set a desired center
+  value. The default is 0.</dd>
     </dl>
     
     <div class="Value">
       <h2>Value</h2>
       
-      <p>output file name</p>
+      <p>Centered data matrix.</p>
   
     </div>
 
     <div class="Description">
       <h2>Description</h2>
       
-      <p>Arguments:</p>
+      <p>Center data matrix to 0 for each variable by removing the
+  means.</p>
+  
+    </div>
+
+    <div class="Note">
+      <h2>Note</h2>
+      
+      <p>Note that the model assumes samples x features matrix,
+  and centers each feature.</p>
   
     </div>
 
     <div class="References">
       <h2>References</h2>
       
-      <p>See citation("microbiome")</p>
+      <p>See citation("microbiome").</p>
   
     </div>
-      </div>
+    
+    <h2 id="examples">Examples</h2>
+    <pre class="examples"><div class='input'>#centerData(X)</div></pre>
+  </div>
   <div class="span4">
     <!-- <ul>
-      <li>GenerateSimulatedData</li>
+      <li>centerData</li>
     </ul>
     <ul>
-      <li>utilities</li>
+      <li>maths</li><li>utilities</li>
     </ul> -->
       
     
     <h2>Author</h2>
     
-  Contact: Leo Lahti
-  <a href='mailto:microbiome-admin@googlegroups.com'>microbiome-admin@googlegroups.com</a>
+  Leo Lahti <a href='mailto:microbiome-admin@googlegroups.com'>microbiome-admin@googlegroups.com</a>
 
     
   </div>
