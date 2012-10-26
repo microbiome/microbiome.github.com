@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-<title>runPCA. microbiome 0.3.52</title>
+<title>GetPhylogeny. microbiome 0.3.52</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="author" content="
   Contact: Leo Lahti
@@ -38,31 +38,17 @@
         
       </header>
       
-      <h1>Description: PCA function</h1>
+      <h1>GetPhylogeny</h1>
 
 <div class="row">
   <div class="span8">
     <h2>Usage</h2>
-    <pre><span class="functioncall"><a href='runPCA.html'>runPCA</a></span><span class="keyword">(</span><span class="symbol">d</span><span class="keyword">,</span> <span class="symbol">level</span><span class="keyword">,</span> <span class="symbol">c1</span><span class="keyword">,</span> <span class="symbol">c2</span><span class="keyword">,</span> <span class="argument">data.labels</span> <span class="argument">=</span> NULL<span class="keyword">,</span> <span class="symbol">write.dir</span><span class="keyword">,</span> <span class="argument">group.by</span> <span class="argument">=</span> NULL<span class="keyword">,</span> <span class="symbol">...</span><span class="keyword">)</span></pre>
+    <pre><span class="functioncall"><a href='GetPhylogeny.html'>GetPhylogeny</a></span><span class="keyword">(</span><span class="symbol">chip</span><span class="keyword">)</span></pre>
     
     <h2>Arguments</h2>
     <dl>
-      <dt>d</dt>
-      <dd>TBA</dd>
-      <dt>level</dt>
-      <dd>TBA</dd>
-      <dt>c1</dt>
-      <dd>TBA</dd>
-      <dt>c2</dt>
-      <dd>TBA</dd>
-      <dt>data.labels</dt>
-      <dd>Optional</dd>
-      <dt>write.dir</dt>
-      <dd>Output directory path</dd>
-      <dt>group.by</dt>
-      <dd>Optional</dd>
-      <dt>...</dt>
-      <dd>Other parameters to be passed to the function
+      <dt>chip</dt>
+      <dd>chip type (e.g. "HITChip")
 
   Returns:</dd>
     </dl>
@@ -70,12 +56,19 @@
     <div class="Value">
       <h2>Value</h2>
       
-      <p>A list.</p>
+      <p>phylogeny mapping table</p>
   
     </div>
 
     <div class="Description">
       <h2>Description</h2>
+      
+      <p>Description: Get Chip phylogeny</p>
+  
+    </div>
+
+    <div class="Details">
+      <h2>Details</h2>
       
       <p>Arguments:</p>
   
@@ -90,7 +83,7 @@
       </div>
   <div class="span4">
     <!-- <ul>
-      <li>runPCA</li>
+      <li>GetPhylogeny</li>
     </ul>
     <ul>
       <li>utilities</li>
