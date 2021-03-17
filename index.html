@@ -8,25 +8,29 @@
     <link rel="stylesheet" href="stylesheets/styles.css">
     <link rel="stylesheet" href="stylesheets/pygment_trac.css">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
+    
   </head>
+  
   <body>
     <div class="wrapper">
       <header>
         <h1>Microbiome</h1>
-        <p>Open source for microbiome bioinformatics</p>
+        <p>R/Bioconductor ecosystem for microbiome bioinformatics with SummarizedExperiment</p>
 
-        <!--<p class="view"><a href="https://github.com/microbiome/">View the GitHub Projects <small>microbiome/</small></a></p>-->
-
-        <p class="view"><p>Contact: <a href="http://www.iki.fi/Leo.Lahti">Leo Lahti</a><br/><!--<small>Hosted on GitHub Pages</small></a></p>-->
+        <p class="view"><p>Contact: <a href="http://www.iki.fi/Leo.Lahti">Leo Lahti</a><br/>
         
-        <p>Key
-        developers/contributors include Felix G.M. Ernst, Domenick
-        C. Braccia, Ruizhu Huang, Tuomas Borman, Hector Corrada Bravo,
-        Vasilis Dakos, Christopher Quince, Karoline Faust, Sudarshan
-        Shetty, and others.</p>
+        <p>Key developers:
+	  <ul>
+	    <li>Felix G.M. Ernst</li>
+	    <li>Tuomas Borman</li>
+            <li>Sudarshan Shetty</li>
+	    <li>Leo Lahti</li>
+	  </ul>
+	</p>
+
+	<p>Key contributors include Domenick C. Braccia, Ruizhu Huang,
+        Hector Corrada Bravo, Vasilis Dakos, Christopher Quince,
+        Karoline Faust, and others.</p>
 
         <p>The full list of contributors varies over time, and is
         identified through the individual repositories. Check each
@@ -35,37 +39,49 @@
         support, or feature requests.</p>
 
 
-	<img src="eurobioc2020.png"></img>
+	<img src="eurobioc2020.png", width="50%"></img>
+	<img src="ml4microbiome_logo.png", width="50%"></img>
+	
       </header>
 
       <section>
 
 
 
-<h3>MicrobiomeExperiment for R/Bioc</h3>
+<h3>R/Bioc microbiome ecosystem with SummarizedExperiment</h3>
 
-The MicrobiomeExperiment is an emerging ecosystem of R classes,
-methods, and educational material for microbiome research, formally
-introduced
+This is an open source project developing R/Bioconductor methods,
+benchmarking data, and educational material for microbiome research
+based on the SummarizedExperiment class and its derivatives.
+
+New contributions are very welcome.
+
+The project was formally introduced
 in <a href="https://eurobioc2020.bioconductor.org/">European
-Bioconductor Meeting (EuroBioC2020)</a>. This work is now under active
-development as a joint work by multiple teams. New contributors and
-early adopters are very welcome. A greater project landing page will
-follow later :-) </p>
+Bioconductor Meeting (EuroBioC2020)</a>.
 
-<p>We are envisioning to rethink the microbiome research in
-R/Bioc. The new ecosystem contains the following key elements:</p>
+</p>
+
+<p>We are envisioning to rethink microbiome research in R/Bioc. The
+new ecosystem contains the following key elements:</p>
 
 
 <ul>
 
-  <li><b>Class</b> (Bioc): <a href="https://github.com/HCBravoLab/MicrobiomeExperiment">MicrobiomeExperiment</a></li>
-  
-  <li><b>Methods</b> (R packages): <a href="https://github.com/FelixErnst/mia">mia</a> for analysis, <a href="https://github.com/microbiome/miaViz">miaViz</a> for visualization, other tools are on the way</li>
-  
-  <li><b>Documentation:</b> <a href="https://github.com/microbiome/MiaBook">MiaBook</a> manual</li>
+  <li><b>Class</b> (Bioc): <a href="https://f1000research.com/articles/9-1246">TreeSummarizedExperiment</a>: standard data structure</li>
 
-  <li><b>Community:</b> join us at MicrobiomeExperiment channel in <a href="https://bioc-community.herokuapp.com/">Bioconductor Slack</a></li>  
+  <li><b>Data</b> (Bioc): <a href="https://github.com/microbiome/microbiomeDataSets/">microbiomeDataSets</a>: Experiment Hub based benchmarking/demonstration data sets</li>
+  
+  <li><b>Methods</b> (R packages):
+    <ul>
+      <li><a href="https://github.com/microbiome/mia">mia</a> for microbiome data analysis</li>
+      <li><a href="https://github.com/microbiome/miaViz">miaViz</a> for visualization</li>
+      <li>.. further tools are on the way</li>      
+  </ul>
+  
+  <li><b>Documentation:</b> <a href="microbiome.github.io/miaBook">MiaBook</a> manual (beta version; under preparation)</li>
+
+  <li><b>Community:</b> join us at microbiomeexperiment channel in <a href="https://bioc-community.herokuapp.com/">Bioconductor Slack</a></li>  
   
 </ul>
 
@@ -82,11 +98,13 @@ For further background, see
 
 <p></p>
 
+
+<!--
+
 <h3>Related resources</h3>
 
 <p>The <a href="https://github.com/microbiome">Github site</a> lists
-several tools for microbiome analysis that are on the way to being
-adapted to the new class structure, including:</p>
+also other tools for microbiome analysis:</p>
 
 <ul>
   
@@ -107,48 +125,10 @@ adapted to the new class structure, including:</p>
 
 </ul>
 
-
-<!--
-
-<h3>Data sets</h3>
-
-<ul>
-
-  <li><a href="http://datadryad.org/resource/doi:10.5061/dryad.pk75d">HITChip Atlas</a> with 1006 normal western adults; mostly cross-sectional, including some time sereies and comprehensive metadata</li>
-
-  <li><a href="http://datadryad.org/resource/doi:10.5061/dryad.1mn1n">Diet swap study</a> between African Americans and Rural Africans</li>
-
-  <li><a href="https://peerj.com/articles/32/">Gut microbiota and blood serum lipidomics</a></li> 
-
-  <li>Example data sets in the <a href="https://github.com/microbiome/microbiome/blob/master/vignettes/Data.md">microbiome R package</a> 
-  
-</ul>
-
-
--->
-
-<!--
-
-<h3>Presentation slides and publications</h3>
-
-<ul>
-
-  <li><a href="20160901-Lahti.pdf">MicrobesRUs seminar, Turku, Finland Sep 1, 2016</a> 
-  
-  <li><a href="http://antagomir.github.io/work/pubs/">Publications</a> 
-  
-</ul>
-
-
 -->
 
       </section>
-<!--
-      <footer>
-        <p>Maintained by <a href="http://www.iki.fi/Leo.Lahti">Leo Lahti</a>; 
-        <small>Hosted on GitHub Pages</small></p>
-      </footer>
--->
+
     </div>
     <script src="javascripts/scale.fix.js"></script>
     
