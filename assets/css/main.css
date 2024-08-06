@@ -809,7 +809,7 @@ section {
   --color-background: #fff;
   --color-background-rgb: 255, 255, 255;
   width: 100%;
-  min-height: 100vh;
+  min-height: 10vh;
   position: relative;
   padding: 160px 0 80px 0;
   display: flex;
@@ -888,7 +888,7 @@ section {
 }
 
 .hero .sign-up-form {
-  margin-top: 20px;
+  margin-top: 10px;
   padding: 10px;
   border-radius: 7px;
   background: var(--color-box-background);
@@ -932,6 +932,37 @@ section {
   .hero p {
     font-size: 18px;
   }
+}
+.nav-item {
+  padding: 0.5rem 0xp;
+}
+
+.dropdown-hover:hover>.dropdown-menu {
+  display: inline-block;
+}
+
+.dropdown-hover>.dropdown-toggle:active {
+  pointer-events: none;
+}
+.text-justify {
+  text-align: justify;
+}
+@keyframes blink {
+  0% { opacity: 1; }
+  20% { opacity: 0.6; }
+  50% { opacity: 0; }
+  70% { opacity: 0.6; }
+  100% { opacity: 1; }
+}
+
+.blinking-link {
+  animation: blink 1s step-start infinite;
+  color: #007bff; /* Link color */
+  text-decoration: none; /* Removes underline */
+}
+
+.blinking-link:hover {
+  text-decoration: underline; /* Adds underline on hover */
 }
 
 /* Clients Section - Home Page
