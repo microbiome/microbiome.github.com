@@ -80,7 +80,7 @@ h6 {
 section {
   color: var(--color-default);
   background-color: var(--color-background);
-  padding: 40px 0;
+  padding: 60px 0;
   overflow: clip;
 }
 
@@ -102,7 +102,7 @@ section {
 .section-title h2:before,
 .section-title h2:after {
   content: "";
-  width: 10px;
+  width: 50px;
   height: 2px;
   background: #0092ac;
   display: inline-block;
@@ -809,7 +809,7 @@ section {
   --color-background: #fff;
   --color-background-rgb: 255, 255, 255;
   width: 100%;
-  min-height: 10vh;
+  min-height: 100vh;
   position: relative;
   padding: 160px 0 80px 0;
   display: flex;
@@ -888,7 +888,7 @@ section {
 }
 
 .hero .sign-up-form {
-  margin-top: 10px;
+  margin-top: 20px;
   padding: 10px;
   border-radius: 7px;
   background: var(--color-box-background);
@@ -933,6 +933,7 @@ section {
     font-size: 18px;
   }
 }
+
 .text-justify {
   text-align: justify;
 }
@@ -1144,25 +1145,15 @@ section {
 .services .service-item {
   position: relative;
   padding-top: 40px;
-  
 }
 
-.services .container {
-  position: relative;
-  z-index: 3;
-}
-
-.services p {
-  color: #000;
-  margin: 4px 0 0 0;
-  font-size: 20px;
-}
 .services .service-item:before {
   content: "";
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
+  height: 2px;
   background: rgba(var(--color-default-rgb), 0.1);
 }
 
