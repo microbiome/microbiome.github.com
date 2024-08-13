@@ -934,6 +934,9 @@ section {
   }
 }
 
+.text-justify {
+  text-align: justify;
+}
 /* Clients Section - Home Page
 ------------------------------*/
 .clients {
